@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-app.use("/", function(req, res, next) {
+app.use("/", (req, res, next) => {
   req.requestTime = new Date();
   let yyyy = req.requestTime.getFullYear();
   let mm = ("0" + (req.requestTime.getMonth() + 1)).substr(-2);
